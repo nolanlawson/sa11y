@@ -9,12 +9,16 @@
             <p>This is a test page with no violations</p>
             <audio src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3">Audio test</audio>
             <video src="https://file-examples-com.github.io/uploads/2020/03/file_example_WEBM_480_900KB.webm">Video test</video>
+            <button id="shadow-button"><div id="shadow-button-inner"></div></button>
         </div>
         <div role="contentinfo" id="upside-down"></div>
         <!-- cSpell:disable-line -->
         <script>
             const shadow = document.getElementById('upside-down').attachShadow({ mode: 'open' });
             shadow.innerHTML = '<h2 id="shadow">SHADOW DOM</h2><ul><li>Shadow Item 1</li></ul>';
+
+            document.getElementById('shadow-button-inner')
+                .attachShadow({ mode: 'open' }).innerHTML = 'Click me!'
         </script>
     </body>
 </html>
